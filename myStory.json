@@ -1,0 +1,216 @@
+{
+    "Title": "Cookie Nabber",
+    "Credits": "Story by Nathan Wiinikka (nwiinikk@ucsc.edu)",
+    "InitialLocation": "LivingRoom",
+
+    "Locations": {
+        "LivingRoom": {
+            "Body": "Mom and Dad are outside doing yardwork right now. I don't think they would notice if I took a snickerdoodle from the cookie jar...",
+            "Choices":[
+                {
+                    "Text": "Kitchen",
+                    "Target": "Kitchen"
+                }
+            ]
+        },
+        "Kitchen": {
+            "Body": "On the counter in the kitchen sits a jar, with a bunch of cookies in side! But there's an issue: the jar is locked! I need to find the key and fast, or else I won't get a cookie until after dinner.",
+            "Choices": [
+                {
+                    "Text": "Look in the living room",
+                    "Target": "LivingRoom2"
+                },
+                {
+                    "Text": "Look in the kitchen",
+                    "Target": "Kitchen2"
+                },
+                {
+                    "Text": "Look in the yard",
+                    "Target": "Yard"
+                },
+                {
+                    "Text": "Look in Mom and Dad's bedroom",
+                    "Target": "ParentBedroom"
+                },
+                {
+                    "Text": "Look in my bedroom",
+                    "Target": "MyBedroom"
+                }
+            ]
+        },
+        "LivingRoom2": {
+            "Body": "The TV is on, right now it's on Disney channel. I was watching Dog with a Blog before I became a kid with a mission.",
+            "Choices":[
+                {
+                    "Text": "Look in the kitchen",
+                    "Target": "Kitchen2"
+                },
+                {
+                    "Text": "Look in the yard",
+                    "Target": "Yard"
+                },
+                {
+                    "Text": "Look in Mom and Dad's bedroom",
+                    "Target": "ParentBedroom"
+                },
+                {
+                    "Text": "Look in my bedroom",
+                    "Target": "MyBedroom"
+                }
+            ]
+        },
+        "Kitchen2": {
+            "Body": "The jar sits on the counter, begging to be opened.",
+            "Check": "Hey you should check if the player has the key here",
+            "Choices":[
+                {
+                    "Text": "Look in the living room",
+                    "Target": "LivingRoom2"
+                },
+                {
+                    "Text": "Look in the yard",
+                    "Target": "Yard"
+                },
+                {
+                    "Text": "Look in Mom and Dad's bedroom",
+                    "Target": "ParentBedroom"
+                },
+                {
+                    "Text": "Look in my bedroom",
+                    "Target": "MyBedroom"
+                }
+            ],
+            "Option": [
+                {
+                    "Text": "Unlock the jar",
+                    "Target": "Unlock"
+                }
+            ]
+        },
+        "Yard": {
+            "Body": "My parents are out there. I shouldn't go out there or else they'll be suspicious.",
+            "Choices":[
+                {
+                    "Text": "Look in the living room",
+                    "Target": "LivingRoom2"
+                },
+                {
+                    "Text": "Look in the kitchen",
+                    "Target": "Kitchen2"
+                },
+                {
+                    "Text": "Look in Mom and Dad's bedroom",
+                    "Target": "ParentBedroom"
+                },
+                {
+                    "Text": "Look in my bedroom",
+                    "Target": "MyBedroom"
+                } 
+            ]
+        },
+        "ParentBedroom": {
+            "Body": "Wow, it's a real mess in here. Mom and Dad really need to clean up. There's no way I'll be able to find anything here on my own.",
+            "Choices":[
+                {
+                    "Text": "Look in the living room",
+                    "Target": "LivingRoom2"
+                },
+                {
+                    "Text": "Look in the kitchen",
+                    "Target": "Kitchen2"
+                },
+                {
+                    "Text": "Look in the yard",
+                    "Target": "Yard"
+                },
+                {
+                    "Text": "Look in my bedroom",
+                    "Target": "MyBedroom"
+                } 
+            ]
+        },
+        "MyBedroom": {
+            "Body": "My room definitely doesn't have the key in it, but there is my dog Sparky lying on my bed! He's a good boy, Dad has started teaching him how to fetch stuff he loses.",
+            "Choices":[
+                {
+                    "Text": "Look in the living room",
+                    "Target": "LivingRoom2"
+                },
+                {
+                    "Text": "Look in the kitchen",
+                    "Target": "Kitchen2"
+                },
+                {
+                    "Text": "Look in the yard",
+                    "Target": "Yard"
+                },
+                {
+                    "Text": "Look in Mom and Dad's bedroom",
+                    "Target": "ParentBedroom"
+                },
+                {
+                    "Text": "Ask Sparky for help",
+                    "Target": "Sparky"
+                } 
+            ]
+        },
+        "Sparky": {
+            "Body": "I know Dad loses his keys a lot, so maybe Sparky knows how to find them? I guess I can ask him.",
+            "Choices":[
+                {
+                    "Text": "Hey Sparky! Do you know where the keys are?",
+                    "Target": "KeySearch1"
+                }
+            ]
+        },
+        "KeySearch1": {
+            "Body": "Sparky runs to the yard, and returns with a tennis ball.",
+            "Choices":[
+                {
+                    "Text": "That wasn't it Sparky. I said I needed the key!",
+                    "Target": "KeySearch2"
+                }
+            ]
+        },
+        "KeySearch2": {
+            "Body": "Sparky drops the tennis ball, dances around a little, and runs into the living room. I follow him in, and see that he's waiting for me with the TV remote.",
+            "Choices":[
+                {
+                    "Text": "That's not it Sparky! I need the key!",
+                    "Target": "StopDad"
+                }
+            ]
+        },
+        "StopDad": {
+            "Body": "Sparky starts to look again, but right before he leaves my dad walks in. I think he's taking a break from yard work. I need to distract him.",
+            "Choices":[
+                {
+                    "Text": "Change the TV channel",
+                    "Target": "Distraction"
+                }
+            ]
+        },
+        "Distraction":{
+            "Body":"I change the channel to Bloomberg News, and in no time my dad is staring at the screen, complaining about the stock market. I can keep looking for the key!",
+            "Choices": [
+                {
+                    "Text": "Alright Sparky, I need the KEY. K-E-Y",
+                    "Target": "KeySearch3"
+                }
+            ]
+        },
+        "KeySearch3": {
+            "Body": "Sparky runs into my parent's bedroom, and plunges into a pile of clothes. After rustling around a little bit, he comes out with some keys in his mouth. One of them is for sure for the jar",
+            "Change": "Change to true here",
+            "Choices":[
+                {
+                    "Text": "Good job Sparky! I'm going to go get a cookie now!",
+                    "Target": "Kitchen2"
+                }
+            ]
+        },
+        "Unlock": {
+            "Body": "I got a cookie, and Mom and Dad will never find out!"
+        }       
+    }
+}
